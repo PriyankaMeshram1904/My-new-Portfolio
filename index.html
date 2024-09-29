@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Full Stack Java Developer Portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(120deg, #2980b9, #8e44ad);
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            color: #fff;
+        }
+        /* Navbar Styles */
+        .navbar {
+            background: rgba(0, 0, 0, 0.6);
+        }
+        .navbar-nav .nav-link {
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #f39c12;
+        }
+        /* Header Section */
+        header {
+            height: 100vh;
+            background: linear-gradient(rgba(13, 150, 64, 0.7), rgba(86, 38, 106, 0.7)), 
+                url('background.jpg') no-repeat center center/cover;/* background: url('background.jpg') no-repeat center center/cover; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 4rem;
+            animation: fadeInDown 2s;
+        }
+        header p {
+            font-size: 1.5rem;
+            animation: fadeInUp 2s;
+        }
+        @keyframes fadeInDown {
+            0% { opacity: 6; transform: translateY(-40px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background: #d7d7d7;
+            color: #333;
+        }
+        .about img {
+            width: 100%;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+        .about img:hover {
+            transform: scale(1.1);
+        }
+        .about h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: black;
+            font-family: 'Arial', sans-serif; /* Change the font style */
+            font-style: italic; /* Makes the font italic */
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        h2:hover {
+        color: #007bff; /* Changes color on hover */
+        transform: scale(1.1); /* Slightly enlarges the element on hover */
+        }
+        .about p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+        /* Skills Section */
+        .skills {
+            padding: 100px 0;
+            background: #191f37;
+        }
+        .skills h2 {
+            font-size: 3rem;
+            margin-bottom: 40px;
+            color: white;
+            font-family: 'Arial', sans-serif; /* Change the font style */
+            font-style: italic; /* Makes the font italic */
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        h2:hover {
+        color: #007bff; /* Changes color on hover */
+        transform: scale(1.1); /* Slightly enlarges the element on hover */
+        }
+        .progress {
+            height: 25px;
+            width: 350px;
+        }
+        .progress-bar {
+            font-size: 1rem;
+            
+        }
+        /* Projects Section */
+        .projects {
+            padding: 100px 0;
+            background: #d7d7d7;
+            color: black;
+        }
+        .projects h2 {
+            font-size: 3rem;
+            margin-bottom: 40px;
+            font-family: 'Arial', sans-serif; /* Change the font style */
+            font-style: italic; /* Makes the font italic */
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .projects h4 {
+            color: black;
+        }
+        h2:hover {
+        color: #007bff; /* Changes color on hover */
+        transform: scale(1.1); /* Slightly enlarges the element on hover */
+        }
+        .project-item {
+            transition: transform 0.3s ease;
+        }
+        project1.jpgtem:hover {
+            transform: scale(1.05);
+        }
+        .project-item img{
+            height: 170px;
+            width : 170px;
+        }
+
+
+        /* Contact Section */
+        .contact-section {
+        background-color: #191f37;
+        padding: 60px 0;
+        }
+
+        .contact-section .form-control {
+        border-radius: 0;
+        }
+
+        .contact-section .btn {
+        background-color: #2980b9;
+        border: none;
+        transition: background-color 0.3s ease;
+        }
+
+        .contact-section .btn:hover {
+        background-color: #8e44ad;
+        }
+        
+        .contact-section h2{
+            font-size: 2.6rem;
+            margin-bottom: 40px;
+            font-family: 'Arial', sans-serif; /* Change the font style */
+            font-style: italic; /* Makes the font italic */
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        /* Footer */
+        footer {
+            padding: 20px 0;
+            text-align: center;
+            background: #1a252f;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Portfolio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>Hello, I'm Priyanka. I'm a Developer</h1>
+            <p>I design and develop modern web applications using HTML, CSS, Java, Spring Boot and more.</p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <img src="profile.jpg" alt="Profile Image" class="img-fluid">
+                </div>
+                <div class="col-lg-8">
+                    <h2>About Me</h2>
+                    <p>
+                        Hello! I'm Priyanka Meshram, a Web Developer. I specialize in building robust web applications using technologies like HTML, CSS, Java, Spring Boot. With a background in BTech in CSE, I’ve worked on various projects that honed my skills in both front-end and back-end development.
+
+                        I am passionate about creating user-friendly applications that solve real-world problems. I thrive in collaborative environments and enjoy learning new technologies that enhance my development skills. In my spare time, I love exploring new technologies, which help me maintain a well-rounded perspective on problem-solving.
+                        
+                        Feel free to explore my portfolio and reach out if you're interested in collaborating or learning more about my work!
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Java</h4>
+                    <div class="progress">
+                        <div class="progress-bar bg-info" role="progressbar" style="width: 85%">85%</div>
+                    </div>
+                    <h4> Python</h4>
+                    <div class="progress">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 70%">70%</div>
+                    </div>
+                    <h4>JDBC</h4>
+                    <div class="progress">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 80%">80%</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h4>HTML & CSS</h4>
+                    <div class="progress">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 80%">80%</div>
+                    </div>
+                    <h4>SQL</h4>
+                    <div class="progress">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 90%">90%</div>
+                    </div>
+                    <h4>C</h4>
+                    <div class="progress">
+                        <div class="progress-bar bg-secondary" role="progressbar" style="width: 80%">80%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="project-item">
+                        <img src="project1.jpg" class="img-fluid" alt="Project 1">
+                        <h4>Student Registration Page</h4>
+                        <p>Develop a Java userfriendly GUI using java, Swing and JDBC that perform CRUD operations on a MySQL database.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="project-item">
+                        <img src="project2.jpg" class="img-fluid" alt="Project 2">
+                        <h4>Enrollment Form </h4>
+                        <p>Develop a Java GUI using java and Hibernate that perform CRUD operations on a MySQL database.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="project-item">
+                        <img src="project3.jpg" class="img-fluid" alt="Project 3">
+                        <h4>Portfolio</h4>
+                        <p>A responsive portfolio site built with HTML, CSS and bootstrap to showcase my beginner level Java Project.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Contact Me</h2>
+            <form>
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control mb-3" placeholder="Your Name">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="email" class="form-control mb-3" placeholder="Your Email">
+                    </div>
+                </div>
+                <textarea class="form-control mb-3" rows="5" placeholder="Your Message"></textarea>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </section>
